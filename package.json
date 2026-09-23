@@ -1,0 +1,27 @@
+{
+  "name": "space-war",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ئالەم جەڭچىسى — a Uyghur-language top-down arcade space shooter",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "node scripts/e2e.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarisWorks/space-war.git"
+  },
+  "dependencies": {
+    "lucide": "0.545.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}
