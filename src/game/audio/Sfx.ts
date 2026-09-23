@@ -43,6 +43,7 @@ function noiseBurst(
   const { ctx } = c;
   const src = ctx.createBufferSource();
   src.buffer = c.noise;
+  src.loop = true; // random start offset + long tails must not run off the 1 s buffer
   src.playbackRate.value = 0.8 + Math.random() * 0.4;
   const filter = ctx.createBiquadFilter();
   filter.type = type;

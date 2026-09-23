@@ -156,6 +156,7 @@ export class Music {
   private noiseHit(t: number, peak: number, freq: number, dur: number, type: BiquadFilterType): void {
     const src = this.ctx.createBufferSource();
     src.buffer = this.noise;
+    src.loop = true;
     const f = this.ctx.createBiquadFilter();
     f.type = type;
     f.frequency.value = freq;
