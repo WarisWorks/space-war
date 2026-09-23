@@ -150,6 +150,8 @@ export const CONFIG = {
     killsPerStep: 5,
     stepMultiplier: 0.5,
     maxMultiplier: 4,
+    /** Kills without taking damage between "kill streak" call-outs. */
+    streakMilestone: 25,
   },
 
   powerups: {

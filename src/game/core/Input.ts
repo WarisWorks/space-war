@@ -10,11 +10,13 @@ const GAME_KEYS = new Set([...LEFT, ...RIGHT, ...UP, ...DOWN, ...FIRE]);
 
 export type PointerKind = "mouse" | "touch" | "pen";
 
+const NON_TEXT_INPUTS = new Set(["range", "checkbox", "radio", "button", "submit"]);
+
+/** Typing targets swallow game keys; sliders and buttons do not. */
 function isTextField(target: EventTarget | null): boolean {
-  return (
-    target instanceof HTMLElement &&
-    (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable)
-  );
+  if (!(target instanceof HTMLElement)) return false;
+  if (target instanceof HTMLInputElement) return !NON_TEXT_INPUTS.has(target.type);
+  return target.tagName === "TEXTAREA" || target.isContentEditable;
 }
 
 /**

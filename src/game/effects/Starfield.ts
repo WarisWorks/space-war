@@ -107,7 +107,7 @@ export class Starfield {
   }
 
   private makePlanet(initial: boolean): Planet {
-    const size = rand(120, 260);
+    const size = rand(90, 190);
     const c = document.createElement("canvas");
     c.width = c.height = Math.ceil(size * 2.4);
     const ctx = c.getContext("2d")!;
@@ -224,7 +224,7 @@ export class Starfield {
 
     for (const p of this.planets) {
       const d = p.size * 2.4;
-      ctx.globalAlpha = 0.55;
+      ctx.globalAlpha = 0.32;
       ctx.drawImage(p.canvas, p.x - d / 2, p.y - d / 2, d, d);
     }
     ctx.globalAlpha = 1;

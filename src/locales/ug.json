@@ -6,17 +6,14 @@
   "app.titleLatin": "SPACE SHOOTER",
   "app.tagline": "يۇلتۇزلار ئارىسىدىكى ئەڭ ئاخىرقى قوغدىغۇچى",
   "app.loading": "يۈكلىنىۋاتىدۇ...",
-  "app.pressToStart": "باشلاش ئۈچۈن چېكىڭ",
 
   "menu.play": "ئويۇننى باشلاش",
-  "menu.continue": "داۋاملاشتۇرۇش",
   "menu.highScores": "ئەڭ يۇقىرى نومۇرلار",
   "menu.controls": "كونترول",
   "menu.settings": "تەڭشەكلەر",
   "menu.back": "قايتىش",
   "menu.mainMenu": "باش تىزىملىك",
   "menu.backToMainMenu": "باش تىزىملىككە قايتىش",
-  "menu.quit": "چېكىنىش",
 
   "pause.title": "توختىتىلدى",
   "pause.pause": "توختىتىش",
@@ -52,7 +49,6 @@
   "powerup.speedShort": "سۈرئەت",
   "powerup.extraLife": "قوشۇمچە جان",
   "powerup.shieldBroken": "قالقان بۇزۇلدى",
-  "powerup.level": "{n}-دەرىجە",
 
   "enemy.fighter": "ئاددىي جەڭچى",
   "enemy.scout": "تېز رازۋېدچىك",
@@ -78,7 +74,6 @@
   "leaderboard.clear": "تازىلاش",
   "leaderboard.clearConfirm": "بارلىق نەتىجىلەرنى ئۆچۈرەمسىز؟",
 
-  "nameEntry.title": "يېڭى رېكورت!",
   "nameEntry.subtitle": "ئون ئەڭ ياخشى ئويۇنچى قاتارىغا كىردىڭىز",
   "nameEntry.prompt": "ئىسمىڭىزنى كىرگۈزۈڭ",
   "nameEntry.placeholder": "ئىسمىڭىز",
@@ -112,6 +107,7 @@
   "controls.shieldDesc": "دۈشمەن ھۇجۇمىنى توسىدۇ",
   "controls.speedDesc": "ۋاقىتلىق تېزلىك قوشىدۇ",
   "controls.extraLifeDesc": "بىر جان قوشىدۇ",
+  "controls.enemies": "دۈشمەنلەر",
   "controls.or": "ياكى",
 
   "touch.fire": "ئېتىش"

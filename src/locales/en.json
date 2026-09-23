@@ -6,17 +6,14 @@
   "app.titleLatin": "ALEM JENGCHISI",
   "app.tagline": "The last guardian among the stars",
   "app.loading": "Loading...",
-  "app.pressToStart": "Tap to start",
 
   "menu.play": "Play",
-  "menu.continue": "Continue",
   "menu.highScores": "High Scores",
   "menu.controls": "Controls",
   "menu.settings": "Settings",
   "menu.back": "Back",
   "menu.mainMenu": "Main Menu",
   "menu.backToMainMenu": "Back to Main Menu",
-  "menu.quit": "Quit",
 
   "pause.title": "Paused",
   "pause.pause": "Pause",
@@ -52,7 +49,6 @@
   "powerup.speedShort": "Speed",
   "powerup.extraLife": "Extra Life",
   "powerup.shieldBroken": "Shield broken",
-  "powerup.level": "Level {n}",
 
   "enemy.fighter": "Basic Fighter",
   "enemy.scout": "Fast Scout",
@@ -78,7 +74,6 @@
   "leaderboard.clear": "Clear",
   "leaderboard.clearConfirm": "Delete all scores?",
 
-  "nameEntry.title": "New Record!",
   "nameEntry.subtitle": "You made the Top 10",
   "nameEntry.prompt": "Enter your name",
   "nameEntry.placeholder": "Your name",
@@ -112,6 +107,7 @@
   "controls.shieldDesc": "Absorbs enemy hits",
   "controls.speedDesc": "Temporary speed boost",
   "controls.extraLifeDesc": "Adds one life",
+  "controls.enemies": "Enemies",
   "controls.or": "or",
 
   "touch.fire": "Fire"

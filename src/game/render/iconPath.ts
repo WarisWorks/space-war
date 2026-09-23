@@ -1,4 +1,4 @@
-type IconNode = [string, Record<string, string | number | undefined>][];
+import type { IconNode } from "lucide";
 
 /**
  * Converts a lucide icon node (24×24 viewBox) into a Path2D so the same icon set used
@@ -8,10 +8,11 @@ type IconNode = [string, Record<string, string | number | undefined>][];
 export function iconToPath2D(node: IconNode): Path2D {
   const path = new Path2D();
   for (const [tag, a] of node) {
-    const n = (k: string): number => Number(a[k] ?? 0);
+    const attrs = a as Record<string, string | number | undefined>;
+    const n = (k: string): number => Number(attrs[k] ?? 0);
     switch (tag) {
       case "path":
-        path.addPath(new Path2D(String(a.d)));
+        path.addPath(new Path2D(String(attrs.d)));
         break;
       case "circle":
         path.moveTo(n("cx") + n("r"), n("cy"));
@@ -23,7 +24,7 @@ export function iconToPath2D(node: IconNode): Path2D {
         break;
       case "polyline":
       case "polygon": {
-        const pts = String(a.points).trim().split(/[\s,]+/).map(Number);
+        const pts = String(attrs.points).trim().split(/[\s,]+/).map(Number);
         for (let i = 0; i < pts.length; i += 2) {
           if (i === 0) path.moveTo(pts[i], pts[i + 1]);
           else path.lineTo(pts[i], pts[i + 1]);
@@ -32,7 +33,7 @@ export function iconToPath2D(node: IconNode): Path2D {
         break;
       }
       case "rect":
-        if (a.rx) path.roundRect(n("x"), n("y"), n("width"), n("height"), n("rx"));
+        if (attrs.rx) path.roundRect(n("x"), n("y"), n("width"), n("height"), n("rx"));
         else path.rect(n("x"), n("y"), n("width"), n("height"));
         break;
     }

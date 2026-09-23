@@ -406,15 +406,15 @@ function drawShield(ctx: Ctx): void {
   glowStroke(ctx, PALETTE.cyan, 10, 1.5);
 }
 
-const POWERUP_STYLE: Record<PowerUpKind, { color: string; icon: Path2D | null }> = {
-  multiShot: { color: PALETTE.cyan, icon: null },
-  shield: { color: PALETTE.teal, icon: null },
-  speed: { color: PALETTE.saffron, icon: null },
-  life: { color: PALETTE.magenta, icon: null },
+export const POWERUP_COLORS: Record<PowerUpKind, string> = {
+  multiShot: PALETTE.cyan,
+  shield: PALETTE.teal,
+  speed: PALETTE.saffron,
+  life: PALETTE.magenta,
 };
 
 function drawPowerUp(ctx: Ctx, kind: PowerUpKind): void {
-  const { color } = POWERUP_STYLE[kind];
+  const color = POWERUP_COLORS[kind];
   const icon =
     kind === "multiShot" ? iconToPath2D(MULTI_SHOT_ICON)
     : kind === "shield" ? iconToPath2D(Shield)
@@ -477,13 +477,6 @@ export interface SpriteSet {
   shield: Sprite;
   powerups: Record<PowerUpKind, Sprite>;
 }
-
-export const POWERUP_COLORS: Record<PowerUpKind, string> = {
-  multiShot: POWERUP_STYLE.multiShot.color,
-  shield: POWERUP_STYLE.shield.color,
-  speed: POWERUP_STYLE.speed.color,
-  life: POWERUP_STYLE.life.color,
-};
 
 export function createSprites(): SpriteSet {
   const player = bake(80, 86, drawPlayer);
